@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UD Bengkel Kriya Daun - Kerajinan Daun dan Kayu Ramah Lingkungan</title>
+  <meta name="description"
+    content="UD Bengkel Kriya Daun mengolah daun gugur dan kayu menjadi peralatan makan, dekorasi, dan suvenir ramah lingkungan, dibuat tangan oleh pengrajin lokal di Surabaya.">
+  <meta name="theme-color" content="#0A4A2E">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="UD Bengkel Kriya Daun">
+  <meta property="og:description"
+    content="Kerajinan daun dan kayu yang ramah lingkungan, dibuat tangan oleh pengrajin lokal.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/logo/favicon.png">
+
+  <!-- Google Fonts: Alice & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Flag Icons (pegged to 7.2.3 via jsDelivr) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top kd-navbar" aria-label="Navigasi utama">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Logo / Brand -->
+      <a class="navbar-brand kd-navbar__brand" href="#beranda">
+        <img src="assets/img/logo/logo-putih.png" class="kd-navbar__logo kd-navbar__logo--white"
+          alt="Logo UD Bengkel Kriya Daun" width="36" height="36">
+        <img src="assets/img/logo/logo-warna.png" class="kd-navbar__logo kd-navbar__logo--color"
+          alt="Logo UD Bengkel Kriya Daun" width="36" height="36">
+        <span class="kd-navbar__name" data-i18n="nav.brand">Bengkel Kriya Daun</span>
+      </a>
+
+      <!-- Mobile Right Actions: Lang Toggle & Hamburger (order-lg-3 so it stays right) -->
+      <div class="d-flex align-items-center gap-2 order-lg-3 ms-lg-4">
+        <!-- Language Toggle (dropdown) -->
+        <div class="kd-lang-toggle" id="langToggle">
+          <button class="kd-lang-btn" type="button" id="langDropdown"
+            aria-expanded="false" aria-label="Pilih bahasa / Select language" data-i18n-aria="langToggle.aria">
+            <span class="fi fi-id kd-lang-flag" id="langFlag" aria-hidden="true"></span>
+            <span class="kd-lang-code" id="langCode">ID</span>
+            <i class="bi bi-chevron-down kd-lang-arrow" aria-hidden="true"></i>
+          </button>
+          <ul class="kd-lang-menu" id="langMenu" aria-labelledby="langDropdown">
+            <li><button class="kd-lang-option" data-lang="id" type="button"><span class="fi fi-id me-2"
+                  aria-hidden="true"></span><span data-i18n="langToggle.id">Indonesia (ID)</span></button></li>
+            <li><button class="kd-lang-option" data-lang="en" type="button"><span class="fi fi-gb me-2"
+                  aria-hidden="true"></span><span data-i18n="langToggle.en">English (EN)</span></button></li>
+          </ul>
+        </div>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="navbar-toggler kd-navbar__toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu navigasi"
+          data-i18n-aria="nav.openMenu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <!-- Menu (order-lg-2) -->
+      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link kd-nav-link" href="#beranda" data-i18n="nav.beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link kd-nav-link" href="#tentang" data-i18n="nav.tentang">Tentang Kami</a>
+          </li>
+          <li class="nav-item"><a class="nav-link kd-nav-link" href="#produk" data-i18n="nav.produk">Produk</a></li>
+          <li class="nav-item"><a class="nav-link kd-nav-link" href="#proses" data-i18n="nav.proses">Proses Kerja</a>
+          </li>
+          <li class="nav-item"><a class="nav-link kd-nav-link" href="#struktur" data-i18n="nav.struktur">Struktur
+              Organisasi</a></li>
+          <li class="nav-item"><a class="nav-link kd-nav-link" href="#lokasi" data-i18n="nav.lokasi">Lokasi</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn kd-nav-cta" href="#kontak" data-i18n="nav.hubungi">Hubungi
+              Kami</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO (id: beranda) - 5 slide custom slider ========== -->
+  <section id="beranda" class="kd-hero">
+    <div id="heroCarousel" class="kd-slider" tabindex="0">
+
+      <!-- Indicators -->
+      <div class="kd-hero__indicators">
+        <div class="kd-slider__indicators">
+          <button type="button" data-slide="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-slide="1" aria-label="Slide 2"></button>
+          <button type="button" data-slide="2" aria-label="Slide 3"></button>
+          <button type="button" data-slide="3" aria-label="Slide 4"></button>
+          <button type="button" data-slide="4" aria-label="Slide 5"></button>
+        </div>
+      </div>
+
+      <!-- Track -->
+      <div class="kd-slider__track" aria-live="polite">
+
+        <!-- Slide 1 -->
+        <div class="kd-slide kd-slide--active kd-hero__item">
+          <img src="assets/img/hero/hero-1.webp" class="kd-hero__img"
+            alt="Pengrajin menata daun kering di meja kerja bengkel" width="1920" height="1080">
+          <div class="kd-hero__overlay"></div>
+          <div class="kd-hero__content container">
+            <div class="kd-hero__text">
+              <p class="kd-eyebrow kd-text-on-dark mb-3" data-i18n="hero.eyebrow1">Kerajinan Daun dan Kayu</p>
+              <h1 class="kd-hero__title" data-i18n="hero.title1">Kriya dari daun, karya yang kembali ke alam.</h1>
+              <p class="kd-hero__sub" data-i18n="hero.sub1">UD Bengkel Kriya Daun mengolah daun dan kayu pilihan menjadi
+                peralatan makan, dekorasi, dan suvenir ramah lingkungan, dibuat tangan oleh pengrajin lokal.</p>
+              <div class="kd-hero__actions">
+                <a href="#produk" class="btn kd-btn-primary" data-i18n="hero.btnLihat">Lihat Produk Kami</a>
+                <a href="#kontak" class="btn kd-btn-outline-light" data-i18n="hero.btnHubungi">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="kd-slide kd-hero__item">
+          <img src="assets/img/hero/hero-2.webp" class="kd-hero__img"
+            alt="Deretan produk kerajinan daun dan kayu buatan UD Bengkel Kriya Daun" width="1920" height="1080">
+          <div class="kd-hero__overlay"></div>
+          <div class="kd-hero__content container">
+            <div class="kd-hero__text">
+              <p class="kd-eyebrow kd-text-on-dark mb-3" data-i18n="hero.eyebrow2">Produk Kami</p>
+              <h1 class="kd-hero__title" data-i18n="hero.title2">Dari bahan alami, untuk kehidupan sehari-hari.</h1>
+              <p class="kd-hero__sub" data-i18n="hero.sub2">Piring, mangkuk, tatakan, hingga lampu hias - semua dibuat
+                dari daun dan kayu pilihan, tanpa plastik, tahan lama, dan indah.</p>
+              <div class="kd-hero__actions">
+                <a href="#produk" class="btn kd-btn-primary" data-i18n="hero.btnLihat">Lihat Produk Kami</a>
+                <a href="#kontak" class="btn kd-btn-outline-light" data-i18n="hero.btnHubungi">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="kd-slide kd-hero__item">
+          <img src="assets/img/hero/hero-3.webp" class="kd-hero__img" alt="Tumpukan daun kering bahan baku kerajinan"
+            width="1920" height="1080">
+          <div class="kd-hero__overlay"></div>
+          <div class="kd-hero__content container">
+            <div class="kd-hero__text">
+              <p class="kd-eyebrow kd-text-on-dark mb-3" data-i18n="hero.eyebrow3">Bahan Baku Pilihan</p>
+              <h1 class="kd-hero__title" data-i18n="hero.title3">Dimulai dari daun yang jatuh ke tanah.</h1>
+              <p class="kd-hero__sub" data-i18n="hero.sub3">Kami memungut daun gugur dan sisa kayu yang biasanya
+                terbuang, lalu mengolahnya menjadi produk yang bernilai dan ramah lingkungan.</p>
+              <div class="kd-hero__actions">
+                <a href="#tentang" class="btn kd-btn-primary" data-i18n="hero.btnKenali">Kenali Kami</a>
+                <a href="#kontak" class="btn kd-btn-outline-light" data-i18n="hero.btnHubungi">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="kd-slide kd-hero__item">
+          <img src="assets/img/hero/hero-4.webp" class="kd-hero__img"
+            alt="Lampu hias kap daun menyala hangat di sudut ruangan" width="1920" height="1080">
+          <div class="kd-hero__overlay"></div>
+          <div class="kd-hero__content container">
+            <div class="kd-hero__text">
+              <p class="kd-eyebrow kd-text-on-dark mb-3" data-i18n="hero.eyebrow4">Dekorasi Alami</p>
+              <h1 class="kd-hero__title" data-i18n="hero.title4">Cahaya hangat dari lembaran daun.</h1>
+              <p class="kd-hero__sub" data-i18n="hero.sub4">Lampu hias kap daun kami menghadirkan suasana alami dan
+                nyaman di ruanganmu - rangka kayu kokoh, daun transparan, sinar yang hangat.</p>
+              <div class="kd-hero__actions">
+                <a href="#produk" class="btn kd-btn-primary" data-i18n="hero.btnLihat">Lihat Produk Kami</a>
+                <a href="#kontak" class="btn kd-btn-outline-light" data-i18n="hero.btnHubungi">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="kd-slide kd-hero__item">
+          <img src="assets/img/hero/hero-5.webp" class="kd-hero__img"
+            alt="Pengrajin dan produk kerajinan daun di meja kerja bengkel" width="1920" height="1080">
+          <div class="kd-hero__overlay"></div>
+          <div class="kd-hero__content container">
+            <div class="kd-hero__text">
+              <p class="kd-eyebrow kd-text-on-dark mb-3" data-i18n="hero.eyebrow5">Pengrajin Lokal</p>
+              <h1 class="kd-hero__title" data-i18n="hero.title5">Dibuat tangan, penuh perhatian.</h1>
+              <p class="kd-hero__sub" data-i18n="hero.sub5">Setiap produk kami dikerjakan langsung oleh pengrajin lokal
+                yang terampil - tidak ada mesin massal, hanya keahlian tangan dan cinta pada bahan alami.</p>
+              <div class="kd-hero__actions">
+                <a href="#proses" class="btn kd-btn-primary" data-i18n="hero.btnProses">Lihat Proses Kerja</a>
+                <a href="#kontak" class="btn kd-btn-outline-light" data-i18n="hero.btnHubungi">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /kd-slider__track -->
+
+      <!-- Controls -->
+      <button id="heroPrev" class="kd-hero__control kd-hero__control--prev" type="button" aria-label="Slide sebelumnya"
+        data-i18n-aria="hero.prev">
+        <i class="bi bi-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button id="heroNext" class="kd-hero__control kd-hero__control--next" type="button" aria-label="Slide selanjutnya"
+        data-i18n-aria="hero.next">
+        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== ANGKA (id: angka) ========== -->
+  <section id="angka" class="kd-section kd-section--muted">
+    <div class="container">
+      <p class="text-center kd-section__caption mb-4" data-i18n="angka.caption">Bengkel Kriya Daun dalam angka</p>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="kd-stat-card text-center kd-reveal">
+            <div class="kd-stat__number" data-target="7" data-suffix="+">0+</div>
+            <div class="kd-stat__label" data-i18n="angka.tahun">Tahun berkarya</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="kd-stat-card text-center kd-reveal">
+            <div class="kd-stat__number" data-target="25" data-suffix="">0</div>
+            <div class="kd-stat__label" data-i18n="angka.pengrajin">Pengrajin dan staf</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="kd-stat-card text-center kd-reveal">
+            <div class="kd-stat__number" data-target="6" data-suffix="">0</div>
+            <div class="kd-stat__label" data-i18n="angka.lini">Lini produk</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="kd-stat-card text-center kd-reveal">
+            <div class="kd-stat__number" data-target="100" data-suffix="%">0%</div>
+            <div class="kd-stat__label" data-i18n="angka.bahan">Bahan alami dan terbarukan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TENTANG KAMI (id: tentang) ========== -->
+  <section id="tentang" class="kd-section">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <!-- Teks kiri -->
+        <div class="col-lg-6">
+          <p class="kd-eyebrow" data-i18n="tentang.eyebrow">Tentang Kami</p>
+          <h2 class="kd-section__title" data-i18n="tentang.title">Usaha kriya yang tumbuh dari limbah daun.</h2>
+          <p class="kd-body-lg mb-3" data-i18n="tentang.p1">UD Bengkel Kriya Daun adalah usaha dagang di bidang
+            kerajinan berbahan dasar daun dan kayu. Kami memanfaatkan daun gugur dan sisa kayu yang biasanya terbuang,
+            lalu mengolahnya menjadi produk yang indah, kuat, dan aman dipakai sehari-hari.</p>
+          <p class="kd-body-md mb-4" data-i18n="tentang.p2">Setiap produk melewati empat tahap yang terkoordinasi:
+            penjualan, pengadaan bahan, penyimpanan di gudang, dan produksi. Pencatatan stok bahan baku dilakukan dengan
+            sistem informasi persediaan agar bahan selalu tersedia dan tidak ada yang terbuang percuma.</p>
+
+          <!-- Visi Misi -->
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="kd-card kd-visi-misi-card kd-reveal">
+                <div class="kd-visi-misi-icon" id="iconVisi"><img src="assets/img/icons/visi.png" class="kd-icon-img" alt="Visi"></div>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="tentang.visiLabel">Visi</p>
+                  <p class="kd-body-sm mb-0" data-i18n="tentang.visiText">Menjadi bengkel kriya daun terpercaya yang
+                    mengubah limbah alam menjadi karya bernilai.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="kd-card kd-visi-misi-card kd-reveal">
+                <div class="kd-visi-misi-icon" id="iconMisi"><img src="assets/img/icons/misi.png" class="kd-icon-img" alt="Misi"></div>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="tentang.misiLabel">Misi</p>
+                  <ul class="kd-body-sm mb-0 ps-3">
+                    <li data-i18n="tentang.misiItem1">Memanfaatkan daun dan kayu secara bertanggung jawab.</li>
+                    <li data-i18n="tentang.misiItem2">Menjaga mutu produk lewat produksi yang rapi dan terjadwal.</li>
+                    <li data-i18n="tentang.misiItem3">Mengelola persediaan bahan baku agar produksi tidak terhenti.</li>
+                    <li data-i18n="tentang.misiItem4">Memberdayakan pengrajin dan pemasok lokal.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kanan: foto + profil -->
+        <div class="col-lg-6">
+          <!-- Foto -->
+          <div class="row g-3 mb-4">
+            <div class="col-8">
+              <img src="assets/img/tentang/tentang-1.webp" class="img-fluid kd-tentang-img kd-tentang-img--main"
+                alt="Tampak depan bengkel UD Bengkel Kriya Daun" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="col-4 d-flex align-items-end">
+              <img src="assets/img/tentang/tentang-2.webp" class="img-fluid kd-tentang-img kd-tentang-img--accent"
+                alt="Tangan pengrajin menyelesaikan piring daun" width="900" height="1200" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Profil Perusahaan -->
+          <div class="kd-card kd-profil-card kd-reveal">
+            <h3 class="kd-headline-sm mb-3" data-i18n="tentang.profilTitle">Profil Perusahaan</h3>
+            <table class="kd-profil-table w-100">
+              <tbody>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyNama">Nama usaha</td>
+                  <td>UD Bengkel Kriya Daun</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyBentuk">Bentuk usaha</td>
+                  <td data-i18n="tentang.valBentuk">Usaha Dagang (UD)</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyBidang">Bidang usaha</td>
+                  <td data-i18n="tentang.valBidang">Kerajinan berbahan daun dan kayu</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyTahun">Tahun berdiri</td>
+                  <td>2019</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyPemilik">Pemilik</td>
+                  <td>Ibu Siti Retnanik</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyNib">NIB</td>
+                  <td>233156732</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyKaryawan">Jumlah karyawan</td>
+                  <td data-i18n="tentang.valKaryawan">25 orang</td>
+                </tr>
+                <tr>
+                  <td class="kd-profil-key" data-i18n="tentang.keyAlamat">Alamat</td>
+                  <td>Jl. Ngagel Mulyo XV No.23A, Ngagelrejo, Kec. Wonokromo, Surabaya, Jawa Timur 60245.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUK (id: produk) ========== -->
+  <section id="produk" class="kd-section kd-section--muted">
+    <div class="container">
+      <p class="kd-eyebrow text-center" data-i18n="produk.eyebrow">Produk Kami</p>
+      <h2 class="kd-section__title text-center" data-i18n="produk.title">Dari daun dan kayu, untuk keseharian.</h2>
+      <p class="kd-body-lg text-center kd-section__lead" data-i18n="produk.lead">Setiap produk dibuat dari bahan alami,
+        tanpa plastik, dan bisa dipesan satuan maupun grosir.</p>
+
+      <!-- Grid - semua 6 kartu selalu tampil (3 kolom desktop, 2 tablet, 1 mobile) -->
+      <div class="row g-4" id="produkGrid">
+
+        <!-- Kartu 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="kd-product-card kd-reveal">
+            <div class="kd-product-card__img-wrap">
+              <img src="assets/img/produk/produk-piring.jpg" alt="Piring daun pres" width="800" height="800"
+                loading="lazy" class="kd-product-card__img">
+            </div>
+            <div class="kd-product-card__body">
+              <span class="kd-chip kd-chip--sm mb-2" data-i18n="produk.catMakan">Peralatan Makan</span>
+              <h3 class="kd-headline-xs mb-1" data-i18n="produk.p1Name">Piring Daun Pres</h3>
+              <p class="kd-body-sm kd-text-muted mb-2" data-i18n="produk.p1Desc">Piring dari daun yang dipres, kuat dan
+                bisa terurai alami.</p>
+              <p class="kd-product-card__price" data-i18n="produk.p1Price">mulai Rp 3.500/pcs</p>
+              <a href="https://wa.me/628123240214?text=Halo%2C+saya+tertarik+dengan+Piring+Daun+Pres"
+                class="kd-btn-link" target="_blank" rel="noopener" aria-label="Tanya produk ini: Piring Daun Pres">
+                <span data-i18n="produk.tanyaBtn">Tanya produk ini</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="kd-product-card kd-reveal">
+            <div class="kd-product-card__img-wrap">
+              <img src="assets/img/produk/produk-mangkuk.webp" alt="Mangkuk daun lapis" width="800" height="800"
+                loading="lazy" class="kd-product-card__img">
+            </div>
+            <div class="kd-product-card__body">
+              <span class="kd-chip kd-chip--sm mb-2" data-i18n="produk.catMakan">Peralatan Makan</span>
+              <h3 class="kd-headline-xs mb-1" data-i18n="produk.p2Name">Mangkuk Daun Lapis</h3>
+              <p class="kd-body-sm kd-text-muted mb-2" data-i18n="produk.p2Desc">Mangkuk tahan kuah hangat dengan
+                lapisan daun berlapis.</p>
+              <p class="kd-product-card__price" data-i18n="produk.p2Price">mulai Rp 4.500/pcs</p>
+              <a href="https://wa.me/628123240214?text=Halo%2C+saya+tertarik+dengan+Mangkuk+Daun+Lapis"
+                class="kd-btn-link" target="_blank" rel="noopener" aria-label="Tanya produk ini: Mangkuk Daun Lapis">
+                <span data-i18n="produk.tanyaBtn">Tanya produk ini</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="kd-product-card kd-reveal">
+            <div class="kd-product-card__img-wrap">
+              <img src="assets/img/produk/produk-tatakan.jpg" alt="Set tatakan gelas kayu dan daun" width="800"
+                height="800" loading="lazy" class="kd-product-card__img">
+            </div>
+            <div class="kd-product-card__body">
+              <span class="kd-chip kd-chip--sm mb-2" data-i18n="produk.catMakan">Peralatan Makan</span>
+              <h3 class="kd-headline-xs mb-1" data-i18n="produk.p3Name">Tatakan Gelas Kayu-Daun</h3>
+              <p class="kd-body-sm kd-text-muted mb-2" data-i18n="produk.p3Desc">Tatakan kayu berhias inlay daun kering,
+                satu set isi empat.</p>
+              <p class="kd-product-card__price" data-i18n="produk.p3Price">mulai Rp 45.000/set</p>
+              <a href="https://wa.me/628123240214?text=Halo%2C+saya+tertarik+dengan+Tatakan+Gelas+Kayu-Daun"
+                class="kd-btn-link" target="_blank" rel="noopener"
+                aria-label="Tanya produk ini: Tatakan Gelas Kayu-Daun">
+                <span data-i18n="produk.tanyaBtn">Tanya produk ini</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="kd-product-card kd-reveal">
+            <div class="kd-product-card__img-wrap">
+              <img src="assets/img/produk/produk-keranjang.jpg" alt="Keranjang anyam daun" width="800" height="800"
+                loading="lazy" class="kd-product-card__img">
+            </div>
+            <div class="kd-product-card__body">
+              <span class="kd-chip kd-chip--sm mb-2" data-i18n="produk.catDekor">Dekorasi</span>
+              <h3 class="kd-headline-xs mb-1" data-i18n="produk.p4Name">Keranjang Anyam Daun</h3>
+              <p class="kd-body-sm kd-text-muted mb-2" data-i18n="produk.p4Desc">Keranjang serbaguna dari anyaman daun,
+                cocok untuk penyimpanan.</p>
+              <p class="kd-product-card__price" data-i18n="produk.p4Price">mulai Rp 85.000/pcs</p>
+              <a href="https://wa.me/628123240214?text=Halo%2C+saya+tertarik+dengan+Keranjang+Anyam+Daun"
+                class="kd-btn-link" target="_blank" rel="noopener" aria-label="Tanya produk ini: Keranjang Anyam Daun">
+                <span data-i18n="produk.tanyaBtn">Tanya produk ini</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="kd-product-card kd-reveal">
+            <div class="kd-product-card__img-wrap">
+              <img src="assets/img/produk/produk-lampu.jpg" alt="Lampu hias kap daun" width="800" height="800"
+                loading="lazy" class="kd-product-card__img">
+            </div>
+            <div class="kd-product-card__body">
+              <span class="kd-chip kd-chip--sm mb-2" data-i18n="produk.catDekor">Dekorasi</span>
+              <h3 class="kd-headline-xs mb-1" data-i18n="produk.p5Name">Lampu Hias Daun</h3>
+              <p class="kd-body-sm kd-text-muted mb-2" data-i18n="produk.p5Desc">Kap lampu dari lembaran daun transparan
+                dengan rangka kayu.</p>
+              <p class="kd-product-card__price" data-i18n="produk.p5Price">mulai Rp 165.000/pcs</p>
+              <a href="https://wa.me/628123240214?text=Halo%2C+saya+tertarik+dengan+Lampu+Hias+Daun"
+                class="kd-btn-link" target="_blank" rel="noopener" aria-label="Tanya produk ini: Lampu Hias Daun">
+                <span data-i18n="produk.tanyaBtn">Tanya produk ini</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="kd-product-card kd-reveal">
+            <div class="kd-product-card__img-wrap">
+              <img src="assets/img/produk/produk-bingkai.jpeg" alt="Bingkai kayu berisi daun awetan" width="800"
+                height="800" loading="lazy" class="kd-product-card__img">
+            </div>
+            <div class="kd-product-card__body">
+              <span class="kd-chip kd-chip--sm mb-2" data-i18n="produk.catSuvenir">Suvenir</span>
+              <h3 class="kd-headline-xs mb-1" data-i18n="produk.p6Name">Bingkai Daun Awetan</h3>
+              <p class="kd-body-sm kd-text-muted mb-2" data-i18n="produk.p6Desc">Bingkai kayu berisi daun awetan, cocok
+                untuk hadiah dan suvenir acara.</p>
+              <p class="kd-product-card__price" data-i18n="produk.p6Price">mulai Rp 35.000/pcs</p>
+              <a href="https://wa.me/628123240214?text=Halo%2C+saya+tertarik+dengan+Bingkai+Daun+Awetan"
+                class="kd-btn-link" target="_blank" rel="noopener" aria-label="Tanya produk ini: Bingkai Daun Awetan">
+                <span data-i18n="produk.tanyaBtn">Tanya produk ini</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+
+      <!-- CTA bawah -->
+      <div class="text-center mt-5">
+        <a href="https://wa.me/628123240214?text=Halo%2C+saya+ingin+minta+katalog+lengkap+produk+UD+Bengkel+Kriya+Daun"
+          class="btn kd-btn-secondary" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp me-2"></i><span data-i18n="produk.katalogBtn">Minta Katalog Lengkap</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROSES KERJA (id: proses) ========== -->
+  <section id="proses" class="kd-section">
+    <div class="container">
+      <p class="kd-eyebrow text-center" data-i18n="proses.eyebrow">Proses Kerja</p>
+      <h2 class="kd-section__title text-center" data-i18n="proses.title">Dari bahan baku sampai ke tangan pelanggan.
+      </h2>
+      <p class="kd-body-lg text-center kd-section__lead" data-i18n="proses.lead">Empat bagian bekerja berurutan dan
+        saling terhubung lewat satu sistem pencatatan.</p>
+
+      <div class="row g-4 mb-4">
+        <!-- Langkah 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="kd-process-card kd-reveal">
+            <div class="kd-process-card__img-wrap">
+              <img src="assets/img/proses/proses-1-pengadaan.webp" alt="Staf pengadaan memeriksa bahan baku yang datang"
+                width="800" height="600" loading="lazy" class="kd-process-card__img">
+            </div>
+            <div class="kd-process-card__body">
+              <span class="kd-process-card__num">01</span>
+              <h3 class="kd-headline-sm mb-2" data-i18n="proses.step1Title">Pengadaan</h3>
+              <p class="kd-body-sm" data-i18n="proses.step1Desc">Kami memantau stok bahan baku dan memesan daun serta
+                kayu dari pemasok lokal saat persediaan mendekati batas aman.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="kd-process-card kd-reveal">
+            <div class="kd-process-card__img-wrap">
+              <img src="assets/img/proses/proses-2-gudang.jpg" alt="Gudang bahan baku yang tertata rapi" width="800"
+                height="600" loading="lazy" class="kd-process-card__img">
+            </div>
+            <div class="kd-process-card__body">
+              <span class="kd-process-card__num">02</span>
+              <h3 class="kd-headline-sm mb-2" data-i18n="proses.step2Title">Gudang</h3>
+              <p class="kd-body-sm" data-i18n="proses.step2Desc">Bahan masuk diperiksa, dicatat, lalu disimpan rapi.
+                Setiap barang keluar dan masuk tercatat tanggal dan jumlahnya.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="kd-process-card kd-reveal">
+            <div class="kd-process-card__img-wrap">
+              <img src="assets/img/proses/proses-3-produksi.webp" alt="Pengrajin memproduksi kerajinan di bengkel"
+                width="800" height="600" loading="lazy" class="kd-process-card__img">
+            </div>
+            <div class="kd-process-card__body">
+              <span class="kd-process-card__num">03</span>
+              <h3 class="kd-headline-sm mb-2" data-i18n="proses.step3Title">Produksi</h3>
+              <p class="kd-body-sm" data-i18n="proses.step3Desc">Pengrajin mengambil bahan sesuai jadwal produksi,
+                membuat produk, lalu memeriksa kualitas dan jumlah cacat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langkah 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="kd-process-card kd-reveal">
+            <div class="kd-process-card__img-wrap">
+              <img src="assets/img/proses/proses-4-penjualan.webp" alt="Staf mengemas pesanan pelanggan" width="800"
+                height="600" loading="lazy" class="kd-process-card__img">
+            </div>
+            <div class="kd-process-card__body">
+              <span class="kd-process-card__num">04</span>
+              <h3 class="kd-headline-sm mb-2" data-i18n="proses.step4Title">Penjualan</h3>
+              <p class="kd-body-sm" data-i18n="proses.step4Desc">Pesanan pelanggan dicatat dan ketersediaan produk dicek
+                di gudang sebelum pesanan dikonfirmasi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu Sistem -->
+      <div class="kd-sistem-card kd-reveal">
+        <div class="row align-items-center g-3">
+          <div class="col-auto">
+            <div class="kd-sistem-card__icon" id="iconSistem"><img src="assets/img/icons/sistem.png" class="kd-icon-img" alt="Sistem"></div>
+          </div>
+          <div class="col">
+            <h3 class="kd-headline-sm mb-1" data-i18n="proses.sistemTitle">Sistem Persediaan Bahan Baku</h3>
+            <p class="kd-body-sm mb-0" data-i18n="proses.sistemDesc">Seluruh alur di atas dicatat dalam sistem informasi
+              persediaan berbasis divisi, sehingga stok selalu terpantau dan kesalahan pencatatan manual berkurang.</p>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <button type="button" class="kd-btn-link" data-bs-toggle="modal" data-bs-target="#sistemModal">
+              <span data-i18n="proses.sistemBtn">Lihat tampilan sistem</span> <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Sistem -->
+  <div class="modal fade" id="sistemModal" tabindex="-1" aria-labelledby="sistemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content kd-modal">
+        <div class="modal-header kd-modal__header">
+          <h2 class="modal-title kd-headline-sm" id="sistemModalLabel" data-i18n="proses.modalTitle">Tampilan Sistem
+            Persediaan Bahan Baku</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"
+            data-i18n-aria="proses.modalClose"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img src="assets/img/sistem/sistem-dashboard.webp"
+            alt="Tampilan dashboard sistem informasi persediaan bahan baku" width="1280" height="800"
+            class="img-fluid w-100 kd-modal__img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== KOMITMEN LINGKUNGAN (id: komitmen) ========== -->
+  <section id="komitmen" class="kd-komitmen">
+    <img src="assets/img/komitmen/komitmen-banner.webp" class="kd-komitmen__img"
+      alt="Komitmen Lingkungan UD Bengkel Kriya Daun" width="1920" height="700" loading="lazy">
+  </section>
+
+  <!-- ========== STRUKTUR ORGANISASI (id: struktur) ========== -->
+  <section id="struktur" class="kd-section kd-section--muted">
+    <div class="container">
+      <p class="kd-eyebrow text-center" data-i18n="struktur.eyebrow">Struktur Organisasi</p>
+      <h2 class="kd-section__title text-center" data-i18n="struktur.title">Tim di balik setiap karya.</h2>
+      <p class="kd-body-lg text-center kd-section__lead" data-i18n="struktur.lead">Empat divisi bekerja di bawah satu
+        pimpinan dan saling bertukar data setiap hari.</p>
+
+      <!-- Bagan org -->
+      <div class="kd-org" aria-label="Bagan struktur organisasi" data-i18n-aria="struktur.ariaBagan">
+
+        <!-- Level 1 -->
+        <div class="kd-org__level kd-org__level--1">
+          <div class="kd-org-node kd-org-node--center kd-reveal">
+            <div class="kd-org-node__avatar" data-initials="NP">
+              <img src="assets/img/tim/tim-pemilik.jpg" alt="Potret Nama Pemilik, pemilik usaha" width="72" height="72"
+                loading="lazy" class="kd-org-node__photo">
+            </div>
+            <p class="kd-org-node__name">Ibu Siti Retnanik</p>
+            <p class="kd-org-node__title" data-i18n="struktur.role1">Pimpinan Usaha</p>
+          </div>
+        </div>
+
+        <!-- Connector L1–L2 -->
+        <div class="kd-org__connector kd-org__connector--v"></div>
+
+        <!-- Level 2 -->
+        <div class="kd-org__level kd-org__level--2">
+          <div class="kd-org-node kd-org-node--center kd-reveal">
+            <div class="kd-org-node__avatar" data-initials="NM">
+              <img src="assets/img/tim/tim-manajer.jpeg" alt="Potret Nama Manajer, manajer operasional" width="72"
+                height="72" loading="lazy" class="kd-org-node__photo">
+            </div>
+            <p class="kd-org-node__name">Rizky Dwi</p>
+            <p class="kd-org-node__title" data-i18n="struktur.role2">Manajer Operasional</p>
+          </div>
+        </div>
+
+        <!-- Connector L2–L3 -->
+        <div class="kd-org__connector kd-org__connector--h"></div>
+
+        <!-- Level 3 -->
+        <div class="kd-org__level kd-org__level--3">
+          <!-- Penjualan -->
+          <div class="kd-org-node kd-reveal">
+            <div class="kd-org-node__avatar" data-initials="PJ">
+              <img src="assets/img/tim/tim-penjualan & Produksi.jpg" alt="Potret Kepala Penjualan" width="72" height="72"
+                loading="lazy" class="kd-org-node__photo">
+            </div>
+            <p class="kd-org-node__name">Yoga Noor Fadholy</p>
+            <p class="kd-org-node__title" data-i18n="struktur.role3">Kepala Penjualan</p>
+            <p class="kd-org-node__desc" data-i18n="struktur.desc3">Mencatat pesanan dan transaksi, mengecek
+              ketersediaan produk.</p>
+          </div>
+          <!-- Pengadaan -->
+          <div class="kd-org-node kd-reveal">
+            <div class="kd-org-node__avatar" data-initials="PG">
+              <img src="assets/img/tim/tim-gudang.jpeg" alt="Potret Kepala Pengadaan" width="72" height="72"
+                loading="lazy" class="kd-org-node__photo">
+            </div>
+            <p class="kd-org-node__name">Alif Dio Ardiansyah</p>
+            <p class="kd-org-node__title" data-i18n="struktur.role4">Kepala Pengadaan</p>
+            <p class="kd-org-node__desc" data-i18n="struktur.desc4">Membuat permintaan dan pembelian bahan baku ke
+              pemasok.</p>
+          </div>
+          <!-- Gudang -->
+          <div class="kd-org-node kd-reveal">
+            <div class="kd-org-node__avatar" data-initials="GD">
+              <img src="assets/img/tim/tim-pengadaan.jpeg" alt="Potret Kepala Gudang" width="72" height="72" loading="lazy"
+                class="kd-org-node__photo">   
+            </div>
+            <p class="kd-org-node__name">Handy Emmanuel Marthin Ropa</p>
+            <p class="kd-org-node__title" data-i18n="struktur.role5">Kepala Gudang</p>
+            <p class="kd-org-node__desc" data-i18n="struktur.desc5">Mengelola persediaan serta keluar masuk bahan baku.
+            </p>
+          </div>
+          <!-- Produksi -->
+          <div class="kd-org-node kd-reveal">
+            <div class="kd-org-node__avatar" data-initials="PR">
+              <img src="assets/img/tim/tim-penjualan & Produksi.jpg" alt="Potret Kepala Produksi" width="72" height="72"
+                loading="lazy" class="kd-org-node__photo">
+            </div>
+            <p class="kd-org-node__name">Yoga Noor Fadholy</p>
+            <p class="kd-org-node__title" data-i18n="struktur.role6">Kepala Produksi</p>
+            <p class="kd-org-node__desc" data-i18n="struktur.desc6">Menyusun jadwal produksi dan mengecek hasil serta
+              kualitas produk.</p>
+          </div>
+        </div><!-- /level-3 -->
+
+      </div><!-- /kd-org -->
+    </div>
+  </section>
+
+  <!-- ========== LOKASI (id: lokasi) ========== -->
+  <section id="lokasi" class="kd-section">
+    <div class="container">
+      <p class="kd-eyebrow text-center" data-i18n="lokasi.eyebrow">Lokasi</p>
+      <h2 class="kd-section__title text-center" data-i18n="lokasi.title">Kunjungi bengkel kami.</h2>
+
+      <div class="row g-4 align-items-start">
+        <!-- Peta -->
+        <div class="col-lg-7 order-lg-2">
+          <div class="kd-map-frame">
+            <div class="kd-map-loading" id="mapLoading" aria-live="polite">
+              <i class="bi bi-map"></i>
+              <span data-i18n="lokasi.loadingMap">Memuat peta…</span>
+            </div>
+            <iframe id="mapFrame"
+              src="https://maps.google.com/maps?q=Bengkel+Kriya+Daun+9996,+Ngagelrejo,+Surabaya&ll=-7.296606,112.7531215&z=18&output=embed"
+              width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Peta lokasi UD Bengkel Kriya Daun"
+              aria-label="Peta lokasi bengkel" class="kd-map-frame__iframe d-none">
+            </iframe>
+            <p class="kd-map-frame__fallback d-none" id="mapFallback">
+              <span data-i18n="lokasi.fallbackText">Peta belum bisa ditampilkan.</span>
+              <a href="https://maps.app.goo.gl/udNx3ss4giAu3MyU7" target="_blank" rel="noopener" data-i18n="lokasi.fallbackLink">Buka
+                lokasi kami langsung di Google Maps.</a>
+            </p>
+          </div>
+          <!-- Tombol maps -->
+          <div class="d-flex gap-3 mt-3 flex-wrap">
+            <a href="https://maps.app.goo.gl/udNx3ss4giAu3MyU7" target="_blank" rel="noopener" class="btn kd-btn-secondary">
+              <i class="bi bi-map me-2"></i><span data-i18n="lokasi.mapsBtn">Buka di Google Maps</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Bengkel+Kriya+Daun+9996,+Ngagelrejo,+Surabaya" target="_blank" rel="noopener" class="btn kd-btn-outline">
+              <i class="bi bi-signpost me-2"></i><span data-i18n="lokasi.dirBtn">Petunjuk Arah</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kartu alamat -->
+        <div class="col-lg-5 order-lg-1">
+          <div class="kd-card kd-alamat-card kd-reveal">
+            <h3 class="kd-headline-sm mb-4" data-i18n="lokasi.cardTitle">Bengkel dan Kantor</h3>
+            <ul class="kd-alamat-list list-unstyled mb-0">
+              <li class="kd-alamat-item">
+                <i class="bi bi-geo-alt kd-alamat-item__icon"></i>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="lokasi.alamatLabel">Alamat</p>
+                  <p class="kd-body-sm mb-0">Jl. Ngagel Mulyo XV No.23A, Ngagelrejo, Kec. Wonokromo, Surabaya, Jawa Timur 60245</p>
+                </div>
+              </li>
+              <li class="kd-alamat-item">
+                <i class="bi bi-clock kd-alamat-item__icon"></i>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="lokasi.jamLabel">Jam buka</p>
+                  <p class="kd-body-sm mb-0" data-i18n="lokasi.jamVal">Senin sampai Sabtu, 08.00 – 16.00 WIB</p>
+                  <p class="kd-body-sm mb-0 kd-text-muted" data-i18n="lokasi.jamNote">Minggu dan hari libur nasional
+                    tutup.</p>
+                </div>
+              </li>
+              <li class="kd-alamat-item">
+                <i class="bi bi-whatsapp kd-alamat-item__icon"></i>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="lokasi.waLabel">Telepon / WhatsApp</p>
+                  <a href="https://wa.me/628123240214" class="kd-body-sm kd-link" target="_blank" rel="noopener">+62
+                    812-3240-214</a>
+                </div>
+              </li>
+              <li class="kd-alamat-item">
+                <i class="bi bi-envelope kd-alamat-item__icon"></i>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="lokasi.emailLabel">Email</p>
+                  <a href="mailto:halo@bengkelkriyadaun.example"
+                    class="kd-body-sm kd-link">halo@bengkelkriyadaun.example</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KONTAK (id: kontak) ========== -->
+  <section id="kontak" class="kd-section kd-section--muted">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Form -->
+        <div class="col-lg-7">
+          <h2 class="kd-section__title" data-i18n="kontak.title">Mau pesan atau tanya produk?</h2>
+          <p class="kd-body-lg mb-4" data-i18n="kontak.lead">Ceritakan kebutuhanmu. Kami balas lewat WhatsApp pada jam
+            kerja.</p>
+
+          <form id="kontakForm" novalidate>
+            <!-- Nama -->
+            <div class="mb-4">
+              <label for="inputNama" class="kd-form-label" data-i18n="kontak.namaLabel">Nama lengkap</label>
+              <input type="text" id="inputNama" name="nama" class="form-control kd-input"
+                placeholder="Contoh: Budi Santoso" data-i18n-placeholder="kontak.namaPlaceholder" autocomplete="name"
+                aria-describedby="errNama">
+              <div id="errNama" class="kd-form-error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="mb-4">
+              <label for="inputWA" class="kd-form-label" data-i18n="kontak.waLabel">Nomor WhatsApp</label>
+              <input type="tel" id="inputWA" name="wa" class="form-control kd-input" placeholder="Contoh: 08**********"
+                data-i18n-placeholder="kontak.waPlaceholder" autocomplete="tel" aria-describedby="errWA">
+              <div id="errWA" class="kd-form-error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <!-- Kebutuhan -->
+            <div class="mb-4">
+              <label for="inputKebutuhan" class="kd-form-label" data-i18n="kontak.kebutuhanLabel">Jenis
+                kebutuhan</label>
+              <select id="inputKebutuhan" name="kebutuhan" class="form-select kd-input">
+                <option value="" data-i18n="kontak.kebutuhanDefault">Pilih jenis kebutuhan…</option>
+                <option value="Pesan satuan" data-i18n="kontak.optSatuan">Pesan satuan</option>
+                <option value="Pesan grosir" data-i18n="kontak.optGrosir">Pesan grosir</option>
+                <option value="Suvenir acara" data-i18n="kontak.optSuvenir">Suvenir acara</option>
+                <option value="Kerja sama pemasok" data-i18n="kontak.optKerjasama">Kerja sama pemasok</option>
+                <option value="Lainnya" data-i18n="kontak.optLainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <!-- Pesan -->
+            <div class="mb-4">
+              <label for="inputPesan" class="kd-form-label" data-i18n="kontak.pesanLabel">Pesan</label>
+              <textarea id="inputPesan" name="pesan" class="form-control kd-input" rows="4"
+                placeholder="Tulis produk yang kamu minati, jumlah, atau pertanyaanmu…"
+                data-i18n-placeholder="kontak.pesanPlaceholder" aria-describedby="errPesan"></textarea>
+              <div id="errPesan" class="kd-form-error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div id="formStatus" class="kd-form-status mb-3" role="status" aria-live="polite"></div>
+
+            <button type="submit" class="btn kd-btn-secondary kd-btn-submit">
+              <i class="bi bi-whatsapp me-2"></i><span data-i18n="kontak.submitBtn">Kirim lewat WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Sidebar kontak -->
+        <div class="col-lg-5">
+          <div class="kd-kontak-info">
+            <h3 class="kd-headline-sm mb-4" data-i18n="kontak.directTitle">Hubungi langsung</h3>
+            <ul class="list-unstyled kd-kontak-list">
+              <li class="kd-kontak-list__item">
+                <div class="kd-kontak-list__icon"><i class="bi bi-telephone"></i></div>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="lokasi.waLabel">Telepon / WhatsApp</p>
+                  <a href="https://wa.me/628123240214" class="kd-body-sm kd-link" target="_blank" rel="noopener">+62
+                    812-3240-214</a>
+                </div>
+              </li>
+              <li class="kd-kontak-list__item">
+                <div class="kd-kontak-list__icon"><i class="bi bi-envelope"></i></div>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="lokasi.emailLabel">Email</p>
+                  <a href="mailto:halo@bengkelkriyadaun.example"
+                    class="kd-body-sm kd-link">halo@bengkelkriyadaun.example</a>
+                </div>
+              </li>
+              <li class="kd-kontak-list__item">
+                <div class="kd-kontak-list__icon"><i class="bi bi-clock"></i></div>
+                <div>
+                  <p class="kd-label-md mb-1" data-i18n="kontak.jamKerjaLabel">Jam kerja</p>
+                  <p class="kd-body-sm mb-0" data-i18n="kontak.jamKerjaVal">Senin – Sabtu, 08.00 – 16.00 WIB</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Media Sosial -->
+            <h4 class="kd-headline-sm mt-4 mb-3 kd-kontak-social-title" data-i18n="kontak.socialTitle">Media Sosial</h4>
+            <ul class="list-unstyled kd-kontak-list">
+              <li class="kd-kontak-list__item">
+                <div class="kd-kontak-list__icon"><i class="bi bi-instagram"></i></div>
+                <div>
+                  <p class="kd-label-md mb-0">Instagram</p>
+                  <a href="https://instagram.com/bengkelkriyadaun" class="kd-body-sm kd-link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram UD Bengkel Kriya Daun"
+                    data-i18n-aria="social.igLabel" data-social="ig">@bengkelkriyadaun</a>
+                </div>
+              </li>
+              <li class="kd-kontak-list__item">
+                <div class="kd-kontak-list__icon"><i class="bi bi-facebook"></i></div>
+                <div>
+                  <p class="kd-label-md mb-0">Facebook</p>
+                  <a href="https://facebook.com/bengkelkriyadaun" class="kd-body-sm kd-link" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook UD Bengkel Kriya Daun"
+                    data-i18n-aria="social.fbLabel" data-social="fb">bengkelkriyadaun</a>
+                </div>
+              </li>
+              <li class="kd-kontak-list__item">
+                <div class="kd-kontak-list__icon"><i class="bi bi-twitter-x"></i></div>
+                <div>
+                  <p class="kd-label-md mb-0">X (Twitter)</p>
+                  <a href="https://x.com/bengkelkriyadaun" class="kd-body-sm kd-link" target="_blank"
+                    rel="noopener noreferrer" aria-label="X (Twitter) UD Bengkel Kriya Daun"
+                    data-i18n-aria="social.xLabel" data-social="x">@bengkelkriyadaun</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="kd-footer">
+    <div class="container">
+      <div class="row g-4 kd-footer__grid">
+
+        <!-- Kolom 1: Logo + deskripsi -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a href="#beranda" class="kd-footer__brand">
+            <div class="kd-footer__logo-wrap">
+              <img src="assets/img/logo/logo-putih.png" alt="Logo UD Bengkel Kriya Daun" width="56" height="56"
+                class="kd-footer__logo-color" id="footerLogoColor">
+            </div>
+            <span class="kd-footer__brand-name" data-i18n="nav.brand">Bengkel Kriya Daun</span>
+          </a>
+          <p class="kd-footer__desc" data-i18n="footer.desc">UD Bengkel Kriya Daun, kerajinan daun dan kayu yang ramah
+            lingkungan.</p>
+        </div>
+
+        <!-- Kolom 2: Tautan cepat -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="kd-footer__heading" data-i18n="footer.quickTitle">Tautan cepat</h4>
+          <ul class="list-unstyled kd-footer__links">
+            <li><a href="#tentang" class="kd-footer__link" data-i18n="nav.tentang">Tentang Kami</a></li>
+            <li><a href="#produk" class="kd-footer__link" data-i18n="nav.produk">Produk</a></li>
+            <li><a href="#proses" class="kd-footer__link" data-i18n="nav.proses">Proses Kerja</a></li>
+            <li><a href="#struktur" class="kd-footer__link" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+            <li><a href="#lokasi" class="kd-footer__link" data-i18n="nav.lokasi">Lokasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Kontak + Sosmed -->
+        <div class="col-6 col-md-3 col-lg-3">
+          <h4 class="kd-footer__heading" data-i18n="footer.kontakTitle">Kontak</h4>
+          <ul class="list-unstyled kd-footer__links">
+            <li>
+              <a href="https://wa.me/628123240214" class="kd-footer__link" target="_blank" rel="noopener">
+                <i class="bi bi-whatsapp me-1"></i>+62 812-3240-214
+              </a>
+            </li>
+            <li>
+              <a href="mailto:halo@bengkelkriyadaun.example" class="kd-footer__link">
+                <i class="bi bi-envelope me-1"></i>halo@bengkelkriyadaun.example
+              </a>
+            </li>
+            <li class="kd-footer__text">
+              <i class="bi bi-geo-alt me-1"></i>Jl. Ngagel Mulyo XV No.23A, Surabaya
+            </li>
+          </ul>
+          <!-- Sosmed Footer -->
+          <div class="kd-footer__social mt-3">
+            <a href="https://instagram.com/bengkelkriyadaun" class="kd-footer__social-btn" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram UD Bengkel Kriya Daun" data-i18n-aria="social.igLabel"
+              data-social="ig">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://facebook.com/bengkelkriyadaun" class="kd-footer__social-btn" target="_blank"
+              rel="noopener noreferrer" aria-label="Facebook UD Bengkel Kriya Daun" data-i18n-aria="social.fbLabel"
+              data-social="fb">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://x.com/bengkelkriyadaun" class="kd-footer__social-btn" target="_blank"
+              rel="noopener noreferrer" aria-label="X (Twitter) UD Bengkel Kriya Daun" data-i18n-aria="social.xLabel"
+              data-social="x">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom 4: Jam operasional -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h4 class="kd-footer__heading" data-i18n="footer.jamTitle">Jam operasional</h4>
+          <p class="kd-footer__text" data-i18n="footer.jamDays">Senin – Sabtu</p>
+          <p class="kd-footer__highlight" data-i18n="footer.jamHours">08.00 – 16.00 WIB</p>
+          <p class="kd-footer__text" data-i18n="footer.jamNote">Minggu dan hari libur nasional tutup.</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="kd-footer__bottom">
+        <p class="mb-0" data-i18n="footer.copyright">© 2026 UD Bengkel Kriya Daun. Situs ini dibuat untuk keperluan
+          praktikum.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tombol ke atas -->
+  <button id="backToTop" class="kd-back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas"
+    data-i18n-aria="backToTop.aria">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS 5.3.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Lang JS (kamus terjemahan, dimuat sebelum main.js) -->
+  <script src="assets/js/lang.js"></script>
+
+  <!-- Main JS (logika aplikasi) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
